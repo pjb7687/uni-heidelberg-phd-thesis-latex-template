@@ -43,11 +43,9 @@
 \include{chapters/abstracts}
 
 %------------------- Table of contents --------------------
-\cleardoublepage\tableofcontents\newpage
-\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
-\cleardoublepage\listoffigures\newpage
-\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
-\cleardoublepage\listoftables\newpage
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\contentsname}\tableofcontents\newpage
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}\listoffigures\newpage
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\listtablename}\listoftables\newpage
 
 %--------------------- Main contents ----------------------
 \cleardoublepage
