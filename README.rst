@@ -3,6 +3,8 @@ Heidelberg University PhD Thesis LaTeX Template
 
 A PhD thesis LaTeX template for Combined Faculty of Natural Sciences and Mathematics, Heidelberg University, Germany.
 
+Check out the result: `phdthesis.pdf </phdthesis.pdf>`_
+
 If you use Overleaf, then please set the compiler to ``XeLaTeX``!
 
 The class definition file is `hdphdthesis.cls </hdphdthesis.cls>`_, and the example thesis template is `main.tex </main.tex>`_. The chapter texts and the figures are stored in the ``chapters`` and ``figures`` directories, respectively.
