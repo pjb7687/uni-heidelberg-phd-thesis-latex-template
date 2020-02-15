@@ -21,4 +21,4 @@ Date accessed: 2020 Feb 14
 - Faculty of Physics and Astronomy
 
   - `https://hgsfp.uni-heidelberg.de/?SUB=FGS#FEF <https://hgsfp.uni-heidelberg.de/?SUB=FGS#FEF>`_
-  - `English <./phyiscs_and_astronomy-english.pdf>`_, `German <./phyiscs_and_astronomy-german.pdf>`_
+  - `English <./phyiscs_and_astronomy-english.pdf>`_, `German <./physics_and_astronomy-german.pdf>`_
