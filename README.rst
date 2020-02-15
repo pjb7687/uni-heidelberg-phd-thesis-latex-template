@@ -1,5 +1,5 @@
-Heidelberg University PhD Thesis LaTeX Template
-===============================================
+Heidelberg University PhD Thesis LaTeX Template (Natural Sciences and Mathematics)
+==================================================================================
 
 A PhD thesis LaTeX template, according to `the rules of the Combined Faculty of Natural Sciences and Mathematics, Heidelberg University, Germany </facultyrules>`_.
 
