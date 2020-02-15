@@ -3,9 +3,21 @@
 % Author: Jeongbin Park
 % Description: A thesis template according to the rules of the Combined Faculty of Natural Sciences and Mathematics.
 
-\ProvidesClass{hdbiothesis}[23/09/2019 Heidelberg University Dr. rer. nat. Thesis class]
+\ProvidesClass{hdbiothesis}[15/02/2020 Heidelberg University Dr. rer. nat. Thesis class]
 \NeedsTeXFormat{LaTeX2e}
 
+\let\@thesislanguageenglish\undefined
+\let\@thesislanguagegerman\undefined
+\let\@facultybio\undefined
+\let\@facultychemgeo\undefined
+\let\@facultymathinf\undefined
+\let\@facultyphysik\undefined
+\DeclareOption{english}{\def\@thesislanguageenglish{}}
+\DeclareOption{german}{\def\@thesislanguagegerman{}}
+\DeclareOption{bioscience}{\def\@facultybio{}}
+\DeclareOption{chemgeo}{\def\@facultychemgeo{}}
+\DeclareOption{mathcomp}{\def\@facultymathinf{}}
+\DeclareOption{physicsastro}{\def\@facultyphysik{}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions \relax
 
@@ -66,8 +78,81 @@
     \newpage
 }
 
+\def\@firstpagehead{}
+\def\@presentedby{}
+\def\@borninhead{}
+\def\@examdatehead{}
+\def\@refereeshead{}
+
+\ifdefined\@thesislanguageenglish
+    \def\@presentedby{Presented by}
+    \def\@borninhead{born in}
+    \def\@examdatehead{Oral examination}
+    \def\@refereeshead{Referees}
+    \ifdefined\@facultybio
+        \def\@firstpagehead{Dissertation\\*submitted to the\\*
+                            Combined Faculty of Natural Sciences and Mathematics\\*
+                            of the Ruperto Carola University Heidelberg, Germany\\*
+                            for the degree of\\*Doctor of Natural Sciences}
+    \fi
+    \ifdefined\@facultychemgeo
+        \def\@firstpagehead{Dissertation\\*submitted to the\\*
+                            Combined Faculty of Natural Sciences and Mathematics\\*
+                            Heidelberg University, Germany\\*
+                            for the degree of\\*Doctor of Natural Sciences (Dr. rer. nat.)}
+    \fi
+    \ifdefined\@facultymathinf
+        \def\@presentedby{Put forward by}
+        \def\@borninhead{Born in}
+        \def\@refereeshead{Advisor}
+        \def\@firstpagehead{DISSERTATION\\*submitted\\*to the\\*
+                            Combined Faculty of Natural Sciences and Mathematics\\*
+                            of\\*Heidelberg University, Germany\\*
+                            for the degree of\\*Doctor of Natural Sciences}
+    \fi
+    \ifdefined\@facultyphysik
+        \def\@presentedby{Put forward by}
+        \def\@firstpagehead{Dissertation\\*submitted to the\\*
+                            Combined Faculty of Natural Sciences and Mathematics\\*
+                            of Heidelberg University, Germany\\*
+                            for the degree of\\*Doctor of Natural Sciences}
+    \fi
+\else
+    \def\@presentedby{vorgelegt von}
+    \def\@borninhead{aus}
+    \def\@examdatehead{Tag der mündlichen Prüfung}
+    \def\@refereeshead{Gutachter}
+    \ifdefined\@facultybio
+        \def\@firstpagehead{Inaugural-Dissertation\\*zur\\*
+                            Erlangung der Doktorwürde\\*der\\*
+                            Naturwissenschaftlich-Mathematischen Gesamtfakultät\\*der\\*
+                            Ruprecht–Karls–Universität\\*Heidelberg}
+    \fi
+    \ifdefined\@facultychemgeo
+        \def\@firstpagehead{INAUGURAL-DISSERTATION\\*zur\\*
+                            Erlangung der Doktorwürde\\*der\\*
+                            Naturwissenschaftlich - Mathematischen\\*
+                            Gesamtfakultät\\*der\\*
+                            Ruprecht–Karls–Universität\\*Heidelberg}
+    \fi
+    \ifdefined\@facultymathinf
+        \def\@firstpagehead{INAUGURAL-DISSERTATION\\*zur\\*
+                            Erlangung der Doktorwürde\\*der\\*
+                            Naturwissenschaftlich-Mathematischen Gesamtfakultät\\*der\\*
+                            Ruprecht–Karls–Universität\\*Heidelberg}
+        \def\@refereeshead{Betreuer}
+    \fi
+    \ifdefined\@facultyphysik
+        \def\@firstpagehead{INAUGURAL-DISSERTATION\\*zur\\*
+                            Erlangung der Doktorwürde\\*der\\*
+                            Naturwissenschaftlich-Mathematischen\\*
+                            Gesamtfakultät\\*
+                            der Ruprecht–Karls–Universität\\*Heidelberg}
+    \fi
+\fi
+
 \renewcommand\maketitle{
-    \def\@refereestable{Referees: }
+    \def\@refereestable{\@refereeshead: }
     \foreach \@i in \@referees {
         \protected@xappto\@refereestable{\null & \@i \\}
     }
@@ -80,19 +165,16 @@
         \noindent\makebox[\textwidth][c]{
             \begin{minipage}[t][10cm][t]{\textwidth}
                 \begin{center}
-                    {Dissertation\\*submitted to the\\*
-                    Combined Faculty of Natural Sciences and Mathematics\\*
-                    of the Ruperto Carola University Heidelberg, Germany\\*
-                    for the degree of\\*Doctor of Natural Sciences\par}
+                    {\@firstpagehead\par}
                 \end{center}
             \end{minipage}
         }
         \null\vfill
         \begin{center}
-            {Presented by\\*\@author\par\vskip 1.6em}
+            {\@presentedby\\*\@author\par\vskip 1.6em}
             \begin{tabular}{ l l }
-                born in: & \@bornin \\
-                Oral examination: & \@examdate
+                \@borninhead: & \@bornin \\
+                \@examdatehead: & \@examdate
             \end{tabular}
         \end{center}
         \if@twoside
