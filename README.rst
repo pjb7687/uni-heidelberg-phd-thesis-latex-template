@@ -13,6 +13,14 @@ The class definition file is `hdphdthesis.cls </hdphdthesis.cls>`_, and the exam
 
 Each chapter contains some example use cases of figures, tables, and equations.
 
+Treeware
+========
+It's the terror of knowing what this world is about - our planet is dying of climate changes!
+
+Since it is unavoidable you need to use some amount of papers to write and publish your thesis, I think it makes total sense for you to consider plant a tree. Therefore,
+
+This package is `Treeware <https://treeware.earth>`_. If you use it in production, then we ask that you `buy the world a tree <https://plant.treeware.earth/https://github.com/pjb7687/uni-heidelberg-phd-thesis-latex-template>`_ to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+
 LICENSE
 =======
 
