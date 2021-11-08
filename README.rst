@@ -1,6 +1,16 @@
 Heidelberg University PhD Thesis LaTeX Template (Natural Sciences and Mathematics)
 ==================================================================================
 
+.. image:: https://img.shields.io/badge/License-BSD_2--Clause-orange.svg
+  :alt: License
+  :target: https://opensource.org/licenses/BSD-2-Clause
+
+.. image:: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen
+  :alt: Buy us a tree
+  :target: https://plant.treeware.earth/pjb7687/uni-heidelberg-phd-thesis-latex-template
+
+\
+
 A PhD thesis LaTeX template, according to `the rules of the Combined Faculty of Natural Sciences and Mathematics, Heidelberg University, Germany </facultyrules>`_.
 
 **Disclaimer: This is NOT an official template. Use at your own risk.**
