@@ -5,6 +5,7 @@
 
 \ProvidesClass{hdphdthesis}[08 Jan 2022 Heidelberg University Dr. rer. nat. Thesis class]
 \NeedsTeXFormat{LaTeX2e}
+\RequirePackage{xkeyval}
 
 \let\@thesislanguageenglish\undefined
 \let\@thesislanguagegerman\undefined
@@ -20,9 +21,31 @@
 \DeclareOption{physicsastro}{\def\@facultyphysik{}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions \relax
+\DeclareOptionX{marginleft}{\def\@marginleft{#1}}
+\DeclareOptionX{marginright}{\def\@margintop{#1}}
+\DeclareOptionX{margintop}{\def\@margintop{#1}}
+\DeclareOptionX{marginbottom}{\def\@marginbottom{#1}}
+\DeclareOptionX{bindingoffset}{\def\@bindingoffset{#1}}
+\ProcessOptionsX \relax
 
 \LoadClass{book}
 
+\ifx\@marginleft\undefined
+    \def\@marginleft{1in}
+\fi
+\ifx\@marginright\undefined
+    \def\@marginright{1in}
+\fi
+\ifx\@margintop\undefined
+    \def\@margintop{1in}
+\fi
+\ifx\@marginbottom\undefined
+    \def\@marginbottom{1in}
+\fi
+\ifx\@bindingoffset\undefined
+    \def\@bindingoffset{6mm}
+\fi
+\RequirePackage[left=\@marginleft,right=\@marginright,top=\@margintop,bottom=\@marginbottom,bindingoffset=\@bindingoffset]{geometry}
 \RequirePackage{pgffor}
 \RequirePackage{etoolbox}
 \RequirePackage{stfloats}
