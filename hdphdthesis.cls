@@ -3,7 +3,7 @@
 % Author: Jeongbin Park
 % Description: A thesis template according to the rules of the Combined Faculty of Natural Sciences and Mathematics.
 
-\ProvidesClass{hdbiothesis}[15/02/2020 Heidelberg University Dr. rer. nat. Thesis class]
+\ProvidesClass{hdphdthesis}[08 Jan 2022 Heidelberg University Dr. rer. nat. Thesis class]
 \NeedsTeXFormat{LaTeX2e}
 
 \let\@thesislanguageenglish\undefined
@@ -23,7 +23,6 @@
 
 \LoadClass{book}
 
-\RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 \RequirePackage{pgffor}
 \RequirePackage{etoolbox}
 \RequirePackage{stfloats}
