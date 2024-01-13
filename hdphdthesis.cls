@@ -22,7 +22,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions \relax
 \DeclareOptionX{marginleft}{\def\@marginleft{#1}}
-\DeclareOptionX{marginright}{\def\@margintop{#1}}
+\DeclareOptionX{marginright}{\def\@marginright{#1}}
 \DeclareOptionX{margintop}{\def\@margintop{#1}}
 \DeclareOptionX{marginbottom}{\def\@marginbottom{#1}}
 \DeclareOptionX{bindingoffset}{\def\@bindingoffset{#1}}
